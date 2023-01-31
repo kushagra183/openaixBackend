@@ -23,7 +23,7 @@ res.send("hey")
 const startServer = async ()=>{
     try{
         connectDB(process.env.MONGODB_URL);
-        app.listen(PORT,()=>console.log(`server started on port ${PORT}`))
+        app.listen(process.env.PORT,()=>console.log(`server started on port ${process.env.PORT}`))
     }
     catch(err){
         console.log(err)
